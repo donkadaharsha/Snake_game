@@ -1,0 +1,38 @@
+## Snake Game
+# Overview
+This is a simple snake game implemented in JavaScript. The game allows the player to control a snake using arrow keys and eat food to grow longer. The objective is to avoid colliding with the walls or the snake itself.
+
+## How to Play
+Open the index.html file in your web browser.
+Use the arrow keys to control the direction of the snake.
+The snake will automatically move in the chosen direction.
+Eat food (represented by a dot) to grow longer.
+Avoid colliding with the walls or the snake itself.
+The game ends when the snake collides with a wall or itself.
+You can restart the game by clicking the "Restart" button.
+
+## Code Functionality
+The JavaScript code (script.js) contains the following functionalities:
+
+# Initialization
+Variables Setup: Initializes the game variables such as the snake's initial position, food position, and score.
+DOM Elements: Retrieves references to DOM elements such as the game board, score element, and restart button.
+
+# Main Game Loop
+ Frame Rendering: Manages the game loop using requestAnimationFrame() to ensure smooth rendering and controls the rate of game updates.
+ Speed Control: Allows the player to choose the game speed using a dropdown menu.
+# Collision Detection
+ Border Collision: Checks for collisions between the snake and the walls of the game board.
+ Self-Collision: Detects collisions between different segments of the snake's body.
+# Food Consumption
+ Food Placement: Handles the logic for randomly placing food on the game board.
+ Growth Mechanism: Increases the length of the snake when it eats food and updates the score accordingly.
+# Snake Movement
+ Direction Control: Updates the direction of the snake based on user input (arrow keys).
+ Movement Logic: Calculates the new positions of the snake's segments based on its direction and updates its position on the game board.
+# Display
+ Rendering: Renders the snake, food, and score on the game board using HTML elements and CSS styles.
+ Score Display: Updates the displayed score as the player collects food.
+# Issue: # High Score
+Storage Interaction: Attempts to save and update the player's high score using local storage.
+Currently, there seems to be an issue with the high score functionality. Despite attempts to save and update the high score, it doesn't seem to work as expected.

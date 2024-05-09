@@ -2,27 +2,100 @@
     margin:0px;
     padding: 0px;
 }
+h1{
+    font-family: cursive;
+    position: absolute;
+    margin-top: -450pt;
+}
 .body{
-    background-color: rgb(24, 169, 68);
+    background-image: url('peakpx.jpg');
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #board{
-    background: linear-gradient(white,rgb(237, 241, 0));
+    background: linear-gradient(black, rgb(75 56 120));
     width: 90vmin;
-    height: 92vmin;
+    height: 87vmin;
     border: 2px solid;
     display: grid;
+    margin-top: 50pt;
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
+    position: absolute;
 }
 
 .snake_head{
-    background-color: red;
+    background: linear-gradient(rgb(30, 255, 0),black);
+    border-radius: 10px;
 }
 
 .snake_food{
-    background-color: blue;
+    background: linear-gradient(rgb(11, 11, 11),rgb(0, 208, 255));
+    border-radius: 10px;
+}
+
+#start_inst{
+    position: absolute;
+    color: #ffffff77;
+    display: none;
+    font-size: large;
+    text-align: center;
+    margin: 40pt;
+    z-index: 2;
+   
+}
+#game_over{
+    color:red;
+    display: none;
+}
+#restart{
+    
+    display:none;
+    height: 50pt;
+    width: 150pt;
+    margin: 50pt;
+    cursor:pointer;
+    
+    /* position: fixed; */
+}
+
+#speed{
+    position: absolute;
+    height: 40pt;
+    width: 160pt;
+    font-size: large;
+    font-family: cursive;
+}
+#score_element{
+    position: absolute;
+    color: #0000003f;
+    display: block;
+    text-align: center;
+    margin: 40pt;
+    z-index: 1;
+    font-size: 100pt;
+}
+#final_score{
+    position: absolute;
+    color: #010101;
+    display: block;
+    text-align: center;
+    margin: 40pt;
+    margin-bottom: 200px;
+    z-index: 2;
+    font-size: 30pt;
+}
+
+#high_score{
+    position: absolute;
+    color: #010101;
+    display: block;
+    
+    top: 2px;
+    right:10px;
+    z-index: 2;
+    font-size: 30pt;
 }

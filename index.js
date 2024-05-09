@@ -9,7 +9,8 @@ let score = 0;
 let score_element = document.getElementById('score_element');
 let final_score = document.getElementById('final_score');
 let restart_button = document.getElementById('restart');
-
+let food_sound = new Audio('food.mp3');
+let game_over_sound = new Audio('game_over.mp3');
 
 document.getElementById('board').style.display = 'none';
 const restart = document.getElementById('restart');
@@ -69,6 +70,7 @@ function gameEngine() {
 
     //if snake collides 
     if (collide(snakeArr)) {
+        game_over_sound.play();
         direction = { x: 0, y: 0 };
         snakeArr = [
             { x: 13, y: 15 }   /* Initial position of snake */
@@ -80,6 +82,7 @@ function gameEngine() {
         score_element.style.display = 'none';
         final_score.innerHTML = "Your total score is " + score;
         alert("Game over");
+        
     }
 
     /////////////////* IF SNAKE EATS FOOD *///////////////
@@ -95,8 +98,9 @@ function gameEngine() {
         food = { x: Math.round(a + (b - a) * Math.random()), y: Math.round(a + (b - a) * Math.random()) }
         score += 1;
 
-        highscore();
-        
+        // highscore();
+        food_sound.play();
+
         score_element.innerHTML =  score;
         console.log(score);
 
